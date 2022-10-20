@@ -14,12 +14,11 @@
     "clean": "npx rimraf dist",
     "build": "npm run clean && npx tsc",
     "local": "npm run build && concurrently -p \"none\" \"npx tsc --watch\" \"nodemon -q dist/index.js\"",
-    "test": "mocha -r ts-node/register -r mocha-suppress-logs tests/**/*.spec.ts",
     "lint": "eslint . --cache",
     "lint:fix": "eslint . --cache --fix",
     "prettier": "prettier --check **/*.ts",
     "prettier:fix": "prettier --write **/*.ts",
-    "prepublishOnly": "npm run lint && npm run prettier && npm test && npm run build"
+    "prepublishOnly": "npm run lint && npm run prettier && npm run build"
   },
   "repository": {
     "type": "git",
